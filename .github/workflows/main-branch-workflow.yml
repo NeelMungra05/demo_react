@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - name: Cleaning and Installing
-        uses: npm ci
+        run: npm ci
       - name: Building the application
-        uses: npm run build --if-present
+        run: npm run build --if-present
 
   continuos-development:
     runs-on: ubuntu-latest
