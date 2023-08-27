@@ -4,9 +4,7 @@
 
 if ! command -v node &> /dev/null; then
     echo "Node is not on the system. Installing the latest version of node..."
-    export DEBIAN_FRONTEND=noninteractive
-    sudo apt-get install -y nodejs
-    sudo apt-get install npm -y
+    sudo snap install node --classic
 fi
 
 if command -v node &> /dev/null; then
