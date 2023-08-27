@@ -24,7 +24,7 @@ jobs:
   continuos-development:
     runs-on: ubuntu-latest
     needs: [continuos-integration]
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: Configure AWS credentials
