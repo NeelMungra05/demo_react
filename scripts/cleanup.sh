@@ -5,6 +5,7 @@
 if ! command -v node &> /dev/null; then
     echo "Node is not on the system. Installing the latest version of node..."
     sudo apt-get install -y nodejs
+    sudo apt-get install npm -y
 fi
 
 if command -v node &> /dev/null; then
