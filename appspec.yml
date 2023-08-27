@@ -1,0 +1,20 @@
+version: 0.1
+os: linux
+files:
+  - source: /
+    destination: /var/www/demo_react
+hooks:
+  ApplicationStop:
+    - location: scripts/cleanup.sh
+      timeout: 180
+      runsas: root
+
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 180
+      runsas: root
+
+  ApplicationStart:
+    - location: scripts/build_application.sh
+      timeout: 180
+      runas: root
